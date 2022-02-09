@@ -11,12 +11,12 @@
 <body>
     <header>
         <h1>Calculate your salary</h1>
-        <p>Enter the values and press the button for calculate the salary</p>
+        <p>Enter the values and press the button <br/> for calculate the salary</p>
     </header>
     <main class="main-content">
         <section class="content">
-            <label>Worked hours <input type="number" id="work_hours__input" name="work-hours"></label>
-            <label>Rate per hour <input type="number" id="rate_hour__input" name="rate-hour"></label>
+            <label>Worked hours <input type="number" id="work_hours__input"></label>
+            <label>Rate per hour <input type="number" id="rate_hour__input"></label>
             <button type="button" onclick="onClicCalcSalary()">Calculate</button>
             <p id="showAnswer"></p>
         </section>
@@ -29,7 +29,7 @@
             const rate = inputRate.value;
             const showAnswer = document.getElementById("showAnswer");
             const calc = hours * rate;
-            showAnswer.innerText = "The salary is " + calc;
+            showAnswer.innerText = "The salary is " + calc.toFixed(2);
         }
     </script>
 </body>
