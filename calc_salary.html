@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Calculate your Salary</title>
+</head>
+<body>
+    <header>
+        <h1>Calculate your salary</h1>
+        <p>Enter the values and press the button for calculate the salary</p>
+    </header>
+    <main class="main-content">
+        <section class="content">
+            <label>Worked hours <input type="number" id="work_hours__input" name="work-hours"></label>
+            <label>Rate per hour <input type="number" id="rate_hour__input" name="rate-hour"></label>
+            <button type="button" onclick="onClicCalcSalary()">Calculate</button>
+            <p id="showAnswer"></p>
+        </section>
+    </main>
+    <script>
+        function onClicCalcSalary() {
+            const inputHours = document.getElementById('work_hours__input');
+            const hours = inputHours.value;
+            const inputRate = document.getElementById('rate_hour__input');
+            const rate = inputRate.value;
+            const showAnswer = document.getElementById("showAnswer");
+            const calc = hours * rate;
+            showAnswer.innerText = "The salary is " + calc;
+        }
+    </script>
+</body>
+</html>
